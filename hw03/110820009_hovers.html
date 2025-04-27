@@ -5,17 +5,17 @@
     <title>D3.js 散點圖</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <style>
-        body {
-            background: linear-gradient(to bottom, #87CEFA, #ffffff); /* 上淺藍下白的漸層，像藍天 */
+        html, body {
+            height: 100%;
             margin: 0;
-            padding: 20px;
+            background: linear-gradient(to bottom, #87CEFA, #ffffff); /* 藍天到白色漸層 */
             font-family: Arial, sans-serif;
         }
         #tooltip {
             position: absolute;
             text-align: center;
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
             padding: 4px;
             background: white;
             border: 1px solid #ccc;
@@ -32,12 +32,12 @@
     </style>
 </head>
 <body>
-    
+
 <script>
     // 設定 SVG 畫布大小
     var margin = {top: 20, right: 30, bottom: 40, left: 60},
-        width = 860 - margin.left - margin.right,
-        height = 460 - margin.top - margin.bottom;
+        width = 1200 - margin.left - margin.right, // 寬一點，畫面更滿
+        height = 600 - margin.top - margin.bottom;
 
     // 加入 SVG
     var svg = d3.select("body").append("svg")
@@ -87,8 +87,8 @@
             .append("circle")
             .attr("cx", function(d) { return x(d.SSIM); })
             .attr("cy", function(d) { return y(d.LPIPS); })
-            .attr("r", 8)
-            .style("fill", "#3399FF"); // 藍色點
+            .attr("r", 10)
+            .style("fill", "#3399FF");
 
         // 加標籤（學號）
         svg.append('g')
@@ -96,8 +96,8 @@
             .data(filteredData)
             .enter()
             .append("text")
-            .attr("x", function(d) { return x(d.SSIM) + 10; })
-            .attr("y", function(d) { return y(d.LPIPS) - 10; })
+            .attr("x", function(d) { return x(d.SSIM) + 12; })
+            .attr("y", function(d) { return y(d.LPIPS) - 12; })
             .text(function(d) { return d.Student; })
             .attr("font-size", "12px")
             .attr("fill", "#003366")
@@ -109,19 +109,35 @@
             .style("opacity", 0);
 
         svg.selectAll("circle")
-            .on("mouseover", function(event, d) {
-                tooltip.transition()
-                    .duration(200)
-                    .style("opacity", .95);
-                tooltip.html("<img src='110820009/" + d.Student + ".jpg' alt='手寫圖片' width='120' height='120'>")
-                    .style("left", (event.pageX + 10) + "px")
-                    .style("top", (event.pageY - 50) + "px");
-            })
-            .on("mouseout", function(d) {
-                tooltip.transition()
-                    .duration(500)
-                    .style("opacity", 0);
-            });
+			.on("mouseover", function(event, d) {
+			tooltip.transition()
+				.duration(200)
+				.style("opacity", .95);
+
+			var imgBase = "110820009/" + d.Student;
+			var imgPng = imgBase + ".png";
+			var imgJpg = imgBase + ".jpg";
+
+			var testImg = new Image();
+			testImg.src = imgPng;
+
+			testImg.onload = function() {
+				tooltip.html("<img src='" + imgPng + "' alt='手寫圖片' width='140' height='140'>")
+					.style("left", (event.pageX + 10) + "px")
+					.style("top", (event.pageY - 50) + "px");
+			};
+
+			testImg.onerror = function() {
+				tooltip.html("<img src='" + imgJpg + "' alt='手寫圖片' width='140' height='140'>")
+					.style("left", (event.pageX + 10) + "px")
+					.style("top", (event.pageY - 50) + "px");
+			};
+		})
+		.on("mouseout", function(d) {
+			tooltip.transition()
+				.duration(500)
+				.style("opacity", 0);
+		});
     });
 </script>
 
