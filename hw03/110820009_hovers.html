@@ -109,35 +109,19 @@
             .style("opacity", 0);
 
         svg.selectAll("circle")
-			.on("mouseover", function(event, d) {
-			tooltip.transition()
-				.duration(200)
-				.style("opacity", .95);
-
-			var imgBase = "110820009/" + d.Student;
-			var imgPng = imgBase + ".png";
-			var imgJpg = imgBase + ".jpg";
-
-			var testImg = new Image();
-			testImg.src = imgPng;
-
-			testImg.onload = function() {
-				tooltip.html("<img src='" + imgPng + "' alt='手寫圖片' width='140' height='140'>")
-					.style("left", (event.pageX + 10) + "px")
-					.style("top", (event.pageY - 50) + "px");
-			};
-
-			testImg.onerror = function() {
-				tooltip.html("<img src='" + imgJpg + "' alt='手寫圖片' width='140' height='140'>")
-					.style("left", (event.pageX + 10) + "px")
-					.style("top", (event.pageY - 50) + "px");
-			};
-		})
-		.on("mouseout", function(d) {
-			tooltip.transition()
-				.duration(500)
-				.style("opacity", 0);
-		});
+			.on("mouseover", function(d) {
+				tooltip.transition()
+					.duration(200)
+					.style("opacity", .9);
+				tooltip.html("<img src='110820009/" + d.Student + "' alt='writing' width='120' height='120'>")
+					.style("left", (d3.event.pageX) + "px")
+					.style("top", (d3.event.pageY - 28) + "px");
+			})
+			.on("mouseout", function(d) {
+				tooltip.transition()
+					.duration(500)
+					.style("opacity", 0);
+			});
     });
 </script>
 
