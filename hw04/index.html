@@ -154,7 +154,8 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      這次作業挺有趣的，可以去挑自己喜歡的風格去生圖，不過在做Strong baseline時比較麻煩，好像挑到了一個過強的LoRA，非常強勢地去蓋掉芙莉蓮，變成兩個辛梅爾在一起，花了好久調正負提示詞和調權重才生出一個符合兩人的版本
+      
     </div>
   </div>
 
@@ -170,22 +171,22 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
           <td>Simple baseline - 描述</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
           <td>Medium baseline - 描述</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
           <td>Strong baseline - 描述</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -195,15 +196,54 @@
   </div>
 
   <!-- ------------------------------------------------>
-  <div class="row hw12 bottomrow">
-    <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">    
+      <figure>
+        <figcaption>ComfyUI+工作流</figcaption>
+            <img src="workflow.png" width="100%"/>
+        </figure>
     </div>
   </div>
 
   <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty"> 
+      <figure>
+        <figcaption>完成芙莉蓮Checkpoint、LoRA文生圖</figcaption>
+        <a href="https://civitai.com/models/1188071?modelVersionId=1337429">Checkpoint</a>
+        <br>
+        <a href="https://civitai.com/models/1209474/a4-test?modelVersionId=1373925">LoRA連結</a>
+        <p>LoRA Strength : 1.0</p>
+        <p>Positive：masterpiece, best quality, high score, great score, absurdres, illustration, 1girl, 1frieren, solo, long silver hair, elf, white priest outfit, standing pose, facing forward, looking at viewer, detailed face,blue eyes, smiling, holding staff, using magic, god rays, sunlight, outdoor,delicate lighting,more like frieren, soft colors, lora:mix-a4-v2:1
+        </p>
+        <p>Negative：worst quality, low quality, normal quality, lowers, monochrome, grayscales, blurry, acnes, skin blemishes, age spot, deformity, bad anatomy, bad legs, bad feet, malformed limbs, extra limbs, extra fingers, mutated hands, mutation, disfigured, fused fingers, poorly drawn hands, poorly drawn feet, poorly drawn face
+        </p>
+        <img src="frieren.png" width="100%"/>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">    
+      <figure>
+        <figcaption>替換Ckeckpoint、LoRA完成辛梅爾文生圖</figcaption>
+        <a href="https://civitai.com/models/820208/obsession-illustrious-xl">Checkpoint連結</a>
+        <br>
+        <a href="https://civitai.com/models/155788/frieren-frieren-beyond-journeys-end">LoRA連結1</a>
+        <br>
+        <a href="https://civitai.com/models/189083/himmel-or-sousou-no-frieren-frieren-beyond-journeys-end-or-sd1">LoRA連結2</a>
+        <p>LoRA1 Strength : 0.6</p>
+        <p>LoRA2 Strength : 0.2</p>
+        <p>Positive:masterpiece, best quality, 1girl, 1boy, two characters, lying side by side on grass, night sky, stars, glowing particles, peaceful atmosphere, romantic, close together, soft light, frieren: silver hair, elf ears, long hair, white robe, green eyes, serene expression, female, looking at stars,
+himmel: short blue hair, blue eyes, cape, human ears, capelet, brown pants, young man, gentle smile, male, looking at frieren, <lora:frierenv2-lora-nockehaiser:0.6>, <lora:himmel_sousou_no_frieren:0.2>
+        </p>
+        <p>Negative：worst quality, low quality, normal quality, lowers, monochrome, grayscales, blurry, acnes, skin blemishes, age spot, deformity, bad anatomy, bad legs, bad feet, malformed limbs, extra limbs, extra fingers, mutated hands, mutation, disfigured, fused fingers, poorly drawn hands, poorly drawn feet, poorly drawn face, cloned face, same face, both male, both female, text, nsfw, bad hand, more than two people
+        </p>
+        <img src="himmel.png" width="100%"/>
+      </figure>
+    </div>
+  </div>
 
   <!-- ------------------------------------------------>
 
