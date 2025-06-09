@@ -154,7 +154,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      這次的模型蠻快的將語音檔轉成文字，本來以為20分鐘的長度會有點久，實際執行起來蠻快的，看起來準確度也蠻高的，只不過有某些專有詞和聲音應該是比較糊，輸出文檔再做一些修正就可以蠻快的將大量資訊進行統整，可以方便大量音檔變成文字檔的紀錄
     </div>
   </div>
 
@@ -170,22 +170,22 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
           <td>Simple baseline - 描述</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
           <td>Medium baseline - 描述</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
           <td>Strong baseline - 描述</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -194,18 +194,30 @@
     </div>
   </div>
 
-  <!-- ------------------------------------------------>
+    <!-- ------------------------------------------------>
   <div class="row hw12 bottomrow">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      <a href="https://www.youtube.com/watch?v=UZ9v-bE_rOo">Youtube影片</a><br>
+       <td>1.Simple baseline - 匯入 Google Colab 必要的模組 </td><br>
+       <img src="Colab_simple.png"  width="1000" height="300"><br>
+      </div>
+  </div>
+  <div class="row hw12 bottomrow">
+    <div class="col-md-12 twenty">
+       <td>2.Medium baseline - 進行Automatic Speech Recognition語音辨識並生成字幕</td><br>
+      <img src="Colab_medium.png"  width="800" height="300"><br>
+  </div>
+  </div>
+  <div class="row hw12 bottomrow">
+    <div class="col-md-12 twenty">
+       <td>3.Strong baseline - 通過助教的影片摘要審核</td><br>
+       <img src="Colab_strong.png"width="800" height="300" ><br>
+       <a href="final_text.txt">輸出文檔</a><br> 
     </div>
   </div>
 
   <!-- ------------------------------------------------>
 
-  <!-- ------------------------------------------------>
 
 
 <script>
