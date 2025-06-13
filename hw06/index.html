@@ -154,7 +154,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      這次的作業比較有經驗該怎麼處理了，不過不知道為什麼感覺選用的Lora沒怎麼影響到生成圖片，花了蠻多次去生成和改善提示詞才做出一個比較像範例的影像，不過感覺太過複雜的提示會讓生成的圖片比較混亂，把提示精簡以後才正常
     </div>
   </div>
 
@@ -170,22 +170,22 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
           <td>Simple baseline - 描述</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
           <td>Medium baseline - 描述</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
           <td>Strong baseline - 描述</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -194,17 +194,53 @@
     </div>
   </div>
 
-  <!-- ------------------------------------------------>
+    <!-- ------------------------------------------------>
   <div class="row hw12 bottomrow">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      <a href="https://civitai.com/models/61643?modelVersionId=67841">CheckPoint:based66_v30</a><br>
+      <a href="https://civitai.com/models/207827/jojos-bizarre-adventure-part-5-comic-style-or-5">Lora: JOJO</a><br> 
+       <td>1.Simple baseline - Comfy UI 環境設定完成</td><br>
+       <img src="Colab_UI.png"  width="800" height="200"><br>
     </div>
   </div>
-
-  <!-- ------------------------------------------------>
-
+  <div class="row hw12 bottomrow">
+    <div class="col-md-12 twenty">
+       <td>2.Medium baseline - 生成角色的圖片</td><br>
+       <img src="medium_picture.png"  width="500" height="600"><br>
+       <td> 使用提示詞:
+      "0": "desert, delinquent boy, black outfit, close-up, walking, looking at camera",
+"10": "desert, delinquent boy, black outfit, walking, wind, focused view",
+"20": "desert, delinquent boy, black clothes, sun glare, walking slowly",
+"30": "desert, delinquent boy, black jacket, sand trail, wind",
+"40": "desert, delinquent boy, black outfit, sun behind, walking toward camera",
+"50": "desert, delinquent boy, black outfit, loose hair, wind blowing",
+"60": "desert, delinquent boy, black shirt, sandy wind, serious face",
+"70": "desert, delinquent boy, black hoodie, golden light, slow walk",
+"80": "desert, delinquent boy, black coat, distant pyramids, looking forward",
+"90": "desert, delinquent boy, black outfit, glowing sand, late afternoon",
+"100": "desert, delinquent boy, black outfit, dramatic lighting, approaching ruins",
+"110": "desert, delinquent boy, black outfit, walking toward ruins, looking at camera"
+    </div>
+  </div>
+  <div class="row hw12 bottomrow">
+    <div class="col-md-12 twenty">
+       <td>3.Strong baseline - 生成完整角色動畫</td><br>
+       <img src="strong_gif.gif" ><br>
+       <td> 使用提示詞:
+      "0": "desert, delinquent boy, black outfit, close-up, walking, looking at camera",
+"10": "desert, delinquent boy, black outfit, walking, wind, focused view",
+"20": "desert, delinquent boy, black clothes, sun glare, walking slowly",
+"30": "desert, delinquent boy, black jacket, sand trail, wind",
+"40": "desert, delinquent boy, black outfit, sun behind, walking toward camera",
+"50": "desert, delinquent boy, black outfit, loose hair, wind blowing",
+"60": "desert, delinquent boy, black shirt, sandy wind, serious face",
+"70": "desert, delinquent boy, black hoodie, golden light, slow walk",
+"80": "desert, delinquent boy, black coat, distant pyramids, looking forward",
+"90": "desert, delinquent boy, black outfit, glowing sand, late afternoon",
+"100": "desert, delinquent boy, black outfit, dramatic lighting, approaching ruins",
+"110": "desert, delinquent boy, black outfit, walking toward ruins, looking at camera"
+    </div>
+  </div>
   <!-- ------------------------------------------------>
 
 
